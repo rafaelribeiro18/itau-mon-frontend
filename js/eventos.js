@@ -108,10 +108,12 @@ function CriaPDF() {
     // CRIA UM OBJETO WINDOW
     var win = window.open('', '', 'height=700,width=700');
     win.document.write('<html><head>');
-    win.document.write('<title>Empregados</title>');   // <title> CABEÇALHO DO PDF.
+    win.document.write('<title>Relatório de Eventos</title>');   // <title> CABEÇALHO DO PDF.
     win.document.write(style);                                     // INCLUI UM ESTILO NA TAB HEAD
     win.document.write('</head>');
     win.document.write('<body>');
+    win.document.write('<br>');
+    win.document.write('<center><font color="#4B515D" face="Verdana, Geneva, sans-serif"><h3>Relatório de eventos por período</h3><center>');
     win.document.write(minhaTabela);                          // O CONTEUDO DA TABELA DENTRO DA TAG BODY
     win.document.write('</body></html>');
     win.document.close();                                            // FECHA A JANELA
