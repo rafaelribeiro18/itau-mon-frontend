@@ -5,21 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
     <link rel="stylesheet" href="/css/estilo.css">
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
 
     <script src="/js/login.js"></script>
 
     <title>Login</title>
 </head>
 
-<body class="bg-info">
+<body class="bg-light">
     <div class="container d-flex h-100"> <!-- Para centralizar na vertical -->
         <div class="row align-items-center w-100"> <!-- Para centralizar na horizontal -->
             <div class="col-8 mx-auto"> <!-- Usar coluna com 8 das 12 disponíveis, com margem automática -->
-                <div id="login">
+                <div class="jumbotron" id="dashmenu">
                     <div class="row">
                         <div class="col">
                             <div class="text-center" id="msgError"></div>                            
@@ -30,7 +28,7 @@
                         <input type="email" class="form-control" placeholder="e-mail / racf" id="txtUser">
                         <input type="password" class="form-control" placeholder="senha" id="txtSenha">
                         <div class="col text-center">
-                            <button class="btn btn-outline-primary" id="btn1" onclick="autenticar(event)">Login</button>
+                            <button class="btn btn-primary" onclick="autenticar(event)">Login</button>
                         </div>
                     </form>
                 </div>

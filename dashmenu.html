@@ -5,9 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/estilo.css">
 
     <script src="/js/dashmenu.js"></script>
@@ -17,7 +15,7 @@
 
 </head>
 
-<body class="bg-info" onload="validaLogin()">
+<body class="bg-light" onload="validaLogin()">
     <div class="container h-100">
         <div class="row justify-content-between">
             <div id="foto" class="col-8">
@@ -31,19 +29,21 @@
                     </div>
                 </div>
             </div>
-            <div id="btn" class="col-4 text-right">
-                <button class="btn btn-warning text-white" id="btn1" onclick="logout()">Logout</button>
+            <div class="col-4 text-right">
+                <button class="btn btn-danger text-light" id="btn1" onclick="logout()">Logout</button>
             </div>
         </div>
         
         <div class="row h-50 justify-content-center" >
             <div class="col-8 h-50 my-auto" id="dashmenu">
-                <button class="btn btn-primary" style="margin-top: -15px; width: 15em">Selecione o seu relatório</button>
-                <div class="row h-100">
+                <button class="btn btn-primary text-light" style="margin-top: 15px; width: 19em">Selecione o seu relatório</button>
+                <br><br>
+                <div class="row h-50">
                     <div class="col my-auto text-center">
-                        <button class="btn btn-light"><a href="eventosperido.html">Relatório de eventos por período</button></a>
+                        <button class="btn btn-light"><a href="eventosperido.html" class="text-secondary">Relatório de eventos por período</button></a>
                         <p></p>
-                        <button class="btn btn-light"><a href="contalarmes.html">Relatório consolidado por alarmes</button></a>
+                        <button class="btn btn-light"><a href="contalarmes.html" class="text-secondary">Relatório consolidado por alarmes</button></a>
+                        <p></p>
                     </div>
                 </div>
             </div>
