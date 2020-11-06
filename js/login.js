@@ -26,7 +26,7 @@ function tratarResposta(res) {
     if (res.status==200) {
         res.json().then(res => fazerLogin(res));
     }else{
-        document.getElementById("msgError").innerHTML = "Usuario e/ou Senha inválido(a)!";
+        document.getElementById("msgError").innerHTML = "Usuário e/ou Senha inválido(a)!";
     }   
 }
 
