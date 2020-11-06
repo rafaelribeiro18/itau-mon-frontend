@@ -37,7 +37,7 @@ function gerarRelatorioEventos(){
 }
 
 function preencheEventos(dados) {
-    console.log(dados);
+    
     if (dados.length == 0) {
         var tabela = '<table class="table table-sm text-light"> <td><h5>Nenhum registro encontrado no periodo selecionado</h5></td>';
 
@@ -46,11 +46,11 @@ function preencheEventos(dados) {
     document.getElementById("btn_export").innerHTML = null;
 
     } else {    
-    console.log(dados);
-        var tabela = '<table class="table table-sm text-light"> <tr><th>Data</th> <th>Alarme</th> <th>Equipamento</th></tr>';
+        var options = {year: 'numeric', month:'numeric', day:'numeric'}
+        var tabela = '<table class="table table-sm text-light"> <tr><th><font color="#4B515D"> Data </font></th> <th><font color="#4B515D">Alarme</font></th> <th><font color="#4B515D">Equipamento</font></th></tr>';
     for (i = 0; i < dados.length; i++) {
         tabela = tabela + ` <tr> 
-                                <td>${new Date(dados[i].dataevt).toLocaleString("pt-BR")}</td>
+                                <td>${new Date(dados[i].dataevt).toLocaleString("pt-BR", options)}</td>
                                 <td>${dados[i].alarme.nome} </td>
                                 <td>${dados[i].equipamento.hostname} </td> 
                             </tr>`        

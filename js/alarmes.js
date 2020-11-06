@@ -36,9 +36,9 @@ function gerarRelatorioAlarmes(){
         .then(result => preencheTotalAlarmes(result));
 }
 
-function preencheTotalAlarmes(result) {
-    console.log(result);
-    if (result.length == 0) {
+function preencheTotalAlarmes(dados) {
+    
+    if (dados.length == 0) {
         var tabela = '<table class="table table-sm text-light"> <td><h5>Nenhum registro encontrado no periodo selecionado</h5></td>';
 
     tabela = tabela + "</table>"
@@ -46,12 +46,12 @@ function preencheTotalAlarmes(result) {
     document.getElementById("btn_export").innerHTML = null;
 
     } else {    
-    console.log(result);
-    var tabela = '<table class="table table-sm text-light"> <tr> <th>Tipo de Alerta</th> <th>Quantidade no periodo</th></tr>';
-       for (var i = 0; i < result.length; i++) {
+    
+    var tabela = '<table class="table table-sm text-light"> <tr> <th><font color="#4B515D">Tipo de Alerta</font></th> <th><font color="#4B515D">Quantidade no periodo</font></th></tr>';
+       for (var i = 0; i < dados.length; i++) {
        tabela = tabela + `<tr> 
-            <td>${result[i][0]} </td> 
-            <td>${result[i][1]} </td>
+            <td>${dados[i][0]} </td> 
+            <td>${dados[i][1]} </td>
                           </tr>`          
     }
 
